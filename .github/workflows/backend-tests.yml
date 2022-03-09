@@ -1,5 +1,8 @@
 name: Run back end tests
-on: push
+on: 
+  push:
+    branches:
+      - workflows_test
   
 jobs:
   bo_traitement_agent-test-run:
