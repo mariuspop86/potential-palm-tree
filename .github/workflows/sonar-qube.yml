@@ -29,3 +29,4 @@ jobs:
             -Dsonar.pullrequest.github.repository=${{ github.repository }}
             -Dsonar.scm.provider=git
             -Dsonar.sources=src
+            -Dsonar.projectKey=Monolithe_recette
