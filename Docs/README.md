@@ -15,3 +15,5 @@ Here is a simple overview of the components involved in the Back-office context:
 This documentation will focus on the symfony component.
 ### Contents
 - [API layer](API-layer.md)
+
+Test
