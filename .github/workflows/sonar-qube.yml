@@ -5,6 +5,9 @@ on:
     branches:
       - main
       - new_branch
+  pull_request:
+    branches:
+      - new_branch
 jobs:
   build:
     runs-on: ubuntu-latest
