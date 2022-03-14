@@ -29,4 +29,4 @@ jobs:
             -Dsonar.pullrequest.github.repository=${{ github.repository }}
             -Dsonar.scm.provider=git
 #            -Dsonar.sources=src
-            -Dsonar.projectKey=Monolithe_recette
+            -Dsonar.projectKey=mariuspop86_potential-palm-tree
