@@ -57,8 +57,6 @@ class FolderService
         switch ($view) {
             case FolderEnum::VIEW_ALL_FOLDERS:
                 return $this->getAllFolders($data);
-            case FolderEnum::VIEW_ALL_FOLDERS:
-                return $this->getAllFolders($data);
             case FolderEnum::VIEW_TO_BE_TREATED:
             case FolderEnum::VIEW_TO_BE_TREATED_SUPERVISOR:
                 return $this->getToBeTreatedFolders($data);
