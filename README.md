@@ -70,3 +70,4 @@ In order to have xdebug up and running, follow the above:
 1. the PHPStorm server needs to be configured and mapped from `Settings > Languages and Frameworks > PHP > Servers`
 2. Add `bo_traitement.local` as `host`
 3. Map the folders properly: `/local/path/to/bo_traitement_agent/ > /var/www/html`
+test

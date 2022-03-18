@@ -1,10 +1,13 @@
 name: Analyze branch
 
 on:
-  push:
-    branches:
-      - main
-      - new_branch
+#  push:
+#    branches:
+#      - main
+#      - new_branch
+  pull_request:
+#    branches:
+#      - new_branch
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,9 +25,11 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
           SONAR_ENDPOINT: 'sonar.wks-recette.com'
-        run: sonar-scanner
-          -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }}
-          -Dsonar.login=${{ secrets.SONAR_TOKEN }}
-          -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
-          -Dsonar.scm.provider=git
-          -Dsonar.sources=src
+          args: >
+            -Dsonar.pullrequest.key=${{ github.event.number }}
+            -Dsonar.pullrequest.branch=${{ github.HEAD_REF }}
+            -Dsonar.pullrequest.base=${{ github.BASE_REF }}
+            -Dsonar.pullrequest.github.repository=${{ github.repository }}
+            -Dsonar.scm.provider=git
+            -Dsonar.sources=src
+            -Dsonar.projectKey=mariuspop86_potential-palm-tree
